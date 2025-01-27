@@ -18,7 +18,7 @@ public class OutsourcedEmployee extends Employee {
     }
   
     @Override
-    public Double paymant() {
+    public final Double paymant() {
         return super.paymant()+ additionalCharge(additionalCharge);
     }
 
