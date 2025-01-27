@@ -45,8 +45,7 @@ public class Employee {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(name + " - ");
-        sb.append(String.format("$ %.2f", paymant()));
+        sb.append(name + " - " + String.format("$ %.2f", paymant()));
         return sb.toString();
     }
 
