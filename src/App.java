@@ -22,7 +22,7 @@ public class App {
             sc.nextLine();
             String name = sc.nextLine();
             System.out.print("Hours: ");
-            Integer hours = sc.nextInt();
+            int hours = sc.nextInt();
             System.out.print("Value per hour: ");
             sc.nextLine();
             Double valuePerHour = sc.nextDouble();
@@ -30,15 +30,13 @@ public class App {
                 System.out.print("Additional charge: ");
                 sc.nextLine();
                 Double addtionalCharge = sc.nextDouble();
-                Employee employee = new OutsourcedEmployee(name,hours,valuePerHour,addtionalCharge);
-                employees.add(employee);
+                employees.add(new OutsourcedEmployee(name,hours,valuePerHour,addtionalCharge));
             }
             else{
-                Employee employee = new Employee(name, hours, valuePerHour );
-                employees.add(employee);
+                employees.add(new Employee(name, hours, valuePerHour));
             }
         }   
-        
+        System.out.println();
         System.out.println("PAYMENTS: ");
         for(Employee emp : employees){
             System.out.println(emp);

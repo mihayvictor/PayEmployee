@@ -7,19 +7,23 @@ public class OutsourcedEmployee extends Employee {
     public OutsourcedEmployee() {
         super();
     }
-
+    
     public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
         super(name, hours, valuePerHour);
         this.additionalCharge = additionalCharge;
     }
 
-    public Double additionalCharge(double additionalCharge){
-        return additionalCharge * CONSTANT;
+    public Double getAdditionalCharge() {
+        return additionalCharge;
+    }
+
+    public void setAdditionalCharge(Double additionalCharge) {
+        this.additionalCharge = additionalCharge;
     }
   
     @Override
     public final Double paymant() {
-        return super.paymant()+ additionalCharge(additionalCharge);
+        return super.paymant() + additionalCharge * CONSTANT;
     }
 
 }
